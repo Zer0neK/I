@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:description" content="0_o">
+  <meta name="theme-color" data-react-helmet="true" content=
+  "#000000">
+  <title>solvent</title>
+  <link rel="icon" type="image/png" href="https://files.catbox.moe/rpqzpf.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-sheen"></div>
+  <video id="bg-video" class="bg-video" autoplay loop muted playsinline></video>
+  <canvas id="snow-canvas" class="snow-canvas"></canvas>
+  <header class="topbar glass">
+    <div class="brand">
+      <div class="brand-icon" aria-hidden="true"></div>
+      <div class="brand-text">
+        <span class="brand-name">solvent</span>
+      </div>
+    </div>
+    <nav class="nav-links" aria-label="main navigation">
+      <a href="index.html">home</a>
+      <a href="games.html">games</a>
+      <a href="contact.html">contact</a>
+      <a href="license.html">license</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn primary" href="download.html">get solvent</a>
+      <a class="btn ghost" href="download.html#source">source</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">license</p>
+          <h2>open source</h2>
+        </div>
+        <a class="btn ghost" href="download.html#source" target="_blank" rel="noreferrer">view on github</a>
+      </div>
+      <div class="license-grid">
+        <div class="license-card glass">
+          <p class="card-title">you can</p>
+          <ul>
+            <li>use and modify the code freely</li>
+            <li>share and redistribute the script</li>
+            <li>use it in your own projects</li>
+          </ul>
+        </div>
+        <div class="license-card glass">
+          <p class="card-title">please</p>
+          <ul>
+            <li>credit where you got the code from</li>
+            <li>link back to the original repository</li>
+            <li>acknowledge the source if you use our code</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="media-dock glass">
+    <div class="media-cover" id="dock-cover"></div>
+    <div class="media-info">
+      <p class="media-title" id="dock-title">penice2me</p>
+      <p class="media-artist" id="dock-artist">lil watermark</p>
+      <div class="media-times">
+        <span id="dock-current">0:00</span>
+        <input type="range" id="dock-seek" min="0" max="100" value="0" aria-label="seek">
+        <span id="dock-duration">0:00</span>
+      </div>
+      <div class="media-volume">
+        <span class="volume-icon">🔊</span>
+        <input type="range" id="dock-volume" min="0" max="100" value="100" aria-label="volume">
+      </div>
+    </div>
+    <div class="media-controls">
+      <button class="btn ghost small" id="dock-rewind" type="button">«</button>
+      <button class="btn primary small" id="dock-play" type="button">▶</button>
+      <button class="btn ghost small" id="dock-forward" type="button">»</button>
+    </div>
+    <div class="music-panel glass" id="music-panel">
+      <div class="music-panel-header">
+        <p class="panel-title">tracks</p>
+      </div>
+      <div class="music-panel-tracks">
+        <article class="music-panel-card" data-track="0" data-src="https://files.catbox.moe/7w42g5.mp3" data-video="" data-title="penice2me" data-artist="lil watermark" data-cover="https://i1.sndcdn.com/artworks-4yXOxBhjyuHX3C5A-t1Yddw-t1080x1080.jpg">
+          <div class="panel-cover" style="background-image: url('https://i1.sndcdn.com/artworks-4yXOxBhjyuHX3C5A-t1Yddw-t1080x1080.jpg')"></div>
+          <div class="panel-info">
+            <p class="panel-track-title">penice2me</p>
+            <p class="panel-track-artist">lil watermark</p>
+          </div>
+        </article>
+        <article class="music-panel-card" data-track="1" data-src="https://files.catbox.moe/tn4nlx.wav" data-video="" data-title="honey bourbon" data-artist="jaydes" data-cover="https://i1.sndcdn.com/artworks-Q8nUU3tt6hNlWNdP-ehWdoA-t1080x1080.jpg">
+          <div class="panel-cover" style="background-image: url('https://i1.sndcdn.com/artworks-Q8nUU3tt6hNlWNdP-ehWdoA-t1080x1080.jpg')"></div>
+          <div class="panel-info">
+            <p class="panel-track-title">honey bourbon</p>
+            <p class="panel-track-artist">jaydes</p>
+          </div>
+        </article>
+        <article class="music-panel-card" data-track="2" data-src="https://files.catbox.moe/iokvoi.mp3" data-video="" data-title="feels good" data-artist="maxon" data-cover="https://i1.sndcdn.com/artworks-ynyxWyyy8zmMacbF-S2LRxA-t1080x1080.png">
+          <div class="panel-cover" style="background-image: url('https://i1.sndcdn.com/artworks-ynyxWyyy8zmMacbF-S2LRxA-t1080x1080.png')"></div>
+          <div class="panel-info">
+            <p class="panel-track-title">feels good</p>
+            <p class="panel-track-artist">maxon</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="media-tracks" aria-hidden="true">
+    <article class="music-card" data-track="0" data-src="https://files.catbox.moe/7w42g5.mp3" data-video="" data-title="penice2me" data-artist="lil watermark" data-cover="https://i1.sndcdn.com/artworks-4yXOxBhjyuHX3C5A-t1Yddw-t1080x1080.jpg"></article>
+    <article class="music-card" data-track="1" data-src="https://files.catbox.moe/tn4nlx.wav" data-video="" data-title="honey bourbon" data-artist="jaydes" data-cover="https://i1.sndcdn.com/artworks-Q8nUU3tt6hNlWNdP-ehWdoA-t1080x1080.jpg"></article>
+    <article class="music-card" data-track="2" data-src="https://files.catbox.moe/iokvoi.mp3" data-video="" data-title="feels good" data-artist="maxon" data-cover="https://i1.sndcdn.com/artworks-ynyxWyyy8zmMacbF-S2LRxA-t1080x1080.png"></article>
+  </div>
+
+  <footer class="footer glass">
+    <div class="footer-brand">
+      <div class="brand-icon small" aria-hidden="true"></div>
+      <span>solvent</span>
+    </div>
+    <div class="footer-meta">
+      <span>solvent.lol 2026-2027</span>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
