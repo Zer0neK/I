@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:description" content="0_o">
+  <meta name="theme-color" data-react-helmet="true" content=
+  "#000000">
+  <title>solvent</title>
+  <link rel="icon" type="image/png" href="https://files.catbox.moe/rpqzpf.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-sheen"></div>
+  <video id="bg-video" class="bg-video" autoplay loop muted playsinline></video>
+  <canvas id="snow-canvas" class="snow-canvas"></canvas>
+  <header class="topbar glass">
+    <div class="brand">
+      <div class="brand-icon" aria-hidden="true"></div>
+      <div class="brand-text">
+        <span class="brand-name">solvent</span>
+      </div>
+    </div>
+    <nav class="nav-links" aria-label="main navigation">
+      <a href="index.html">home</a>
+      <a href="games.html">games</a>
+      <a href="contact.html">contact</a>
+      <a href="license.html">license</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn primary" href="download.html">get solvent</a>
+      <a class="btn ghost" href="download.html#source">source</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-header">
+        <div>
+          <p class="eyebrow">supported games</p>
+          <h2>games</h2>
+        </div>
+      </div>
+      <div class="games-grid" id="games-grid">
+        <div class="loading-state">loading games</div>
+      </div>
+    </section>
+  </main>
+
+  <div class="game-features-modal glass" id="features-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-game-title">features</h2>
+        <button class="modal-close" onclick="closeGameFeatures()">×</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+      </div>
+    </div>
+  </div>
+
+  <div class="media-dock glass">
+    <div class="media-cover" id="dock-cover"></div>
+    <div class="media-info">
+      <p class="media-title" id="dock-title">reahp</p>
+      <p class="media-artist" id="dock-artist">marjorie w.c sinclair</p>
+      <div class="media-times">
+        <span id="dock-current">0:00</span>
+        <input type="range" id="dock-seek" min="0" max="100" value="0" aria-label="seek">
+        <span id="dock-duration">0:00</span>
+      </div>
+      <div class="media-volume">
+        <span class="volume-icon">🔊</span>
+        <input type="range" id="dock-volume" min="0" max="100" value="100" aria-label="volume">
+      </div>
+    </div>
+    <div class="media-controls">
+      <button class="btn ghost small" id="dock-rewind" type="button">«</button>
+      <button class="btn primary small" id="dock-play" type="button">▶</button>
+      <button class="btn ghost small" id="dock-forward" type="button">»</button>
+    </div>
+    <div class="music-panel glass" id="music-panel">
+      <div class="music-panel-header">
+        <p class="panel-title">tracks</p>
+      </div>
+      <div class="music-panel-tracks">
+        <article class="music-panel-card" data-track="0" data-src="https://files.catbox.moe/7w42g5.mp3" data-video="" data-title="penice2me" data-artist="lil watermark" data-cover="https://i1.sndcdn.com/artworks-4yXOxBhjyuHX3C5A-t1Yddw-t1080x1080.jpg">
+          <div class="panel-cover" style="background-image: url('https://i1.sndcdn.com/artworks-4yXOxBhjyuHX3C5A-t1Yddw-t1080x1080.jpg')"></div>
+          <div class="panel-info">
+            <p class="panel-track-title">penice2me</p>
+            <p class="panel-track-artist">lil watermark</p>
+          </div>
+        </article>
+        <article class="music-panel-card" data-track="1" data-src="https://files.catbox.moe/tn4nlx.wav" data-video="" data-title="honey bourbon" data-artist="jaydes" data-cover="https://i1.sndcdn.com/artworks-Q8nUU3tt6hNlWNdP-ehWdoA-t1080x1080.jpg">
+          <div class="panel-cover" style="background-image: url('https://i1.sndcdn.com/artworks-Q8nUU3tt6hNlWNdP-ehWdoA-t1080x1080.jpg')"></div>
+          <div class="panel-info">
+            <p class="panel-track-title">honey bourbon</p>
+            <p class="panel-track-artist">jaydes</p>
+          </div>
+        </article>
+        <article class="music-panel-card" data-track="2" data-src="https://files.catbox.moe/iokvoi.mp3" data-video="" data-title="feels good" data-artist="maxon" data-cover="https://i1.sndcdn.com/artworks-ynyxWyyy8zmMacbF-S2LRxA-t1080x1080.png">
+          <div class="panel-cover" style="background-image: url('https://i1.sndcdn.com/artworks-ynyxWyyy8zmMacbF-S2LRxA-t1080x1080.png')"></div>
+          <div class="panel-info">
+            <p class="panel-track-title">feels good</p>
+            <p class="panel-track-artist">maxon</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="media-tracks" aria-hidden="true">
+    <article class="music-card" data-track="0" data-src="https://files.catbox.moe/7w42g5.mp3" data-video="" data-title="penice2me" data-artist="lil watermark" data-cover="https://i1.sndcdn.com/artworks-4yXOxBhjyuHX3C5A-t1Yddw-t1080x1080.jpg"></article>
+    <article class="music-card" data-track="1" data-src="https://files.catbox.moe/tn4nlx.wav" data-video="" data-title="honey bourbon" data-artist="jaydes" data-cover="https://i1.sndcdn.com/artworks-Q8nUU3tt6hNlWNdP-ehWdoA-t1080x1080.jpg"></article>
+    <article class="music-card" data-track="2" data-src="https://files.catbox.moe/iokvoi.mp3" data-video="" data-title="feels good" data-artist="maxon" data-cover="https://i1.sndcdn.com/artworks-ynyxWyyy8zmMacbF-S2LRxA-t1080x1080.png"></article>
+  </div>
+
+  <footer class="footer glass">
+    <div class="footer-brand">
+      <div class="brand-icon small" aria-hidden="true"></div>
+      <span>solvent</span>
+    </div>
+    <div class="footer-meta">
+      <span>solvent.lol 2026-2027</span>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+  <script>
+    const gameFeatures = {
+      flick: {
+        combat: [
+          "silent aim",
+          "aimbot",
+          "trigger bot",
+          "recoil multiplier",
+          "fire rate multiplier"
+        ],
+        visual: [
+          "esp",
+          "chams",
+          "tracers"
+        ],
+        movement: [
+          "bunny hop",
+          "speed boost"
+        ]
+      }
+    };
+
+    async function loadGames() {
+      const gamesGrid = document.getElementById('games-grid');
+      
+      try {
+        const apiUrl = 'https://games.roblox.com/v1/games?universeIds=8795154789';
+        let response;
+        let lastError;
+        
+        try {
+          response = await fetch(`https://corsproxy.io/?${encodeURIComponent(apiUrl)}`);
+          if (response.ok) {
+            const data = await response.json();
+            renderGames(data);
+            return;
+          }
+        } catch (e) {
+          lastError = e;
+        }
+        
+        try {
+          response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`);
+          if (response.ok) {
+            const data = await response.json();
+            renderGames(data);
+            return;
+          }
+        } catch (e) {
+          lastError = e;
+        }
+        
+        throw lastError || new Error('failed to load games');
+      } catch (error) {
+        gamesGrid.innerHTML = '<div class="error-state">failed to load games check your connection</div>';
+      }
+    }
+
+    async function renderGames(data) {
+      const gamesGrid = document.getElementById('games-grid');
+      
+      const games = data.data || [];
+      
+      if (!games || games.length === 0) {
+        gamesGrid.innerHTML = '<div class="error-state">no games found</div>';
+        return;
+      }
+
+      const gamesWithThumbnails = await Promise.all(games.map(async (game) => {
+        try {
+          const thumbnailApiUrl = `https://thumbnails.roblox.com/v1/games/icons?universeIds=${game.id}&returnPolicy=PlaceHolder&size=768x432&format=Png&isCircular=false`;
+          
+          let thumbnailResponse;
+          try {
+            thumbnailResponse = await fetch(`https://corsproxy.io/?${encodeURIComponent(thumbnailApiUrl)}`);
+          } catch (e) {
+            try {
+              thumbnailResponse = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(thumbnailApiUrl)}`);
+            } catch (e2) {
+            }
+          }
+          
+          if (thumbnailResponse && thumbnailResponse.ok) {
+            const thumbData = await thumbnailResponse.json();
+            if (thumbData.data && thumbData.data.length > 0 && thumbData.data[0].imageUrl) {
+              game.bannerUrl = thumbData.data[0].imageUrl;
+              return game;
+            }
+          }
+        } catch (e) {
+        }
+        
+        game.bannerUrl = 'https://tr.rbxcdn.com/180DAY-6520033018c6162771a61aac035963ef/768/432/Image/Webp/noFilter';
+        return game;
+      }));
+
+      gamesGrid.innerHTML = gamesWithThumbnails.map(game => {
+        const description = game.description ? 
+          (game.description.length > 120 ? game.description.substring(0, 120) : game.description) : 
+          'no description available';
+        
+        const cleanDescription = description
+          .replace(/\n/g, ' ')
+          .replace(/\s+/g, ' ')
+          .replace(/[.,;:!?'"()[\]{}]/g, '')
+          .trim();
+        
+        const gameUrl = game.rootPlaceId ? 
+          `https://www.roblox.com/games/${game.rootPlaceId}/${encodeURIComponent(game.name || 'game')}` :
+          '#';
+        
+        const creatorName = game.creator?.name || 'Unknown';
+        const hasVerified = game.creator?.hasVerifiedBadge || false;
+        
+        return `
+          <article class="game-card glass">
+            <div class="game-banner">
+              <img src="${game.bannerUrl || 'https://tr.rbxcdn.com/180DAY-6520033018c6162771a61aac035963ef/768/432/Image/Webp/noFilter'}" alt="${escapeHtml((game.name || 'game').toLowerCase())} banner" class="game-banner-image" loading="lazy" />
+            </div>
+            <div class="game-content">
+              <div class="game-header">
+                <h3 class="game-title">${escapeHtml((game.name || 'unknown game').toLowerCase())}</h3>
+                <span class="pill soft">undetected</span>
+              </div>
+              <div class="game-builder">
+                <span class="builder-name">by ${escapeHtml(creatorName.toLowerCase())}</span>
+                ${hasVerified ? '<img src="https://files.catbox.moe/fzpg6f.png" alt="verified" class="verified-badge" />' : ''}
+              </div>
+              <p class="game-description">${escapeHtml(cleanDescription.toLowerCase().replace(/[.,;:!?'"()[\]{}]/g, ''))}</p>
+              <div class="game-features-preview">
+                <span class="feature-tag">combat</span>
+                <span class="feature-tag">visual</span>
+                <span class="feature-tag">movement</span>
+              </div>
+              <div class="game-actions">
+                <a href="${gameUrl}" target="_blank" rel="noreferrer" class="btn secondary">visit game</a>
+                <button class="btn primary" onclick="showGameFeatures('flick')">view features</button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function showGameFeatures(gameId) {
+      const modal = document.getElementById('features-modal');
+      const modalTitle = document.getElementById('modal-game-title');
+      const modalBody = document.getElementById('modal-body');
+      const game = gameFeatures[gameId];
+
+      if (!game) return;
+
+      modalTitle.textContent = gameId + ' features';
+      
+      let html = '';
+      for (const [category, features] of Object.entries(game)) {
+        const shownFeatures = features.slice(0, 3);
+        const remainingCount = features.length - shownFeatures.length;
+        const categoryName = category === 'visual' ? 'visuals' : category;
+        
+        html += `
+          <div class="feature-category">
+            <h3 class="category-title">${categoryName}</h3>
+            <ul class="feature-items">
+              ${shownFeatures.map(f => `<li>${f.toLowerCase()}</li>`).join('')}
+            </ul>
+          </div>
+        `;
+      }
+      
+      modalBody.innerHTML = html;
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGameFeatures() {
+      const modal = document.getElementById('features-modal');
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('features-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'features-modal') {
+        closeGameFeatures();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeGameFeatures();
+      }
+    });
+
+    loadGames();
+  </script>
+</body>
+</html>
