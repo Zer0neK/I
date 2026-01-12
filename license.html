@@ -1,5 +1,7 @@
 <!doctype html>
-<html lang="en">
+<html lang="cn">
+
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,6 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
+
 <body>
   <div class="bg-sheen"></div>
   <video id="bg-video" class="bg-video" autoplay loop muted playsinline></video>
@@ -37,33 +41,122 @@
   </header>
 
   <main>
-    <section class="section">
+    <section id="hero" class="hero">
+      <div class="hero-grid glass">
+        <div class="hero-copy">
+          <h1>剑客™</h1>
+          <p class="lede">以用户为中心的脚本</p>
+          <div class="meta">
+            <div class="meta-card">
+              <span class="meta-label">当前版本</span>
+              <span class="meta-value">v1.0.0</span>
+            </div>
+            <div class="meta-card">
+              <span class="meta-label">创始人</span>
+              <span class="meta-value">初夏</span>
+            </div>
+            <div class="status-indicator-wrapper">
+              <span class="pulsing-dot"></span>
+              <span>正常运行</span>
+            </div>
+          </div>
+          <div class="code-card">
+            <div class="code-header">
+              <p class="code-label">脚本链接</p>
+              <button class="copy" data-copy='getfenv().SG_Key = "这里输入你的卡密";
+loadstring(game:HttpGet("https://jianke.lol/SG"))()'>复制</button>
+            </div>
+            <p class="code-line">getfenv().SG_Key = "这里输入你的卡密";
+loadstring(game:HttpGet("https://jianke.lol/SG"))()</p>
+            <span class="toast" aria-live="polite">复制</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="https://tr.rbxcdn.com/180DAY-e65456725d6e586c7509fcb5c19e233e/150/150/Image/Webp/noFilter" alt="剑客" class="hero-image">
+        </div>
+      </div>
+
+    </section>
+
+    <section id="faq" class="section">
       <div class="section-header">
         <div>
-          <h2>关于剑客</h2>
+          <p class="eyebrow">问题</p>
+          <h2>为什么选择剑客？</h2>
         </div>
-        <a class="btn ghost" href="download.html#source" target="_blank" rel="noreferrer">前往购买</a>
       </div>
-      <div class="license-grid">
-        <div class="license-card glass">
-          <p class="card-title">你还在寻找不卡顿、不封号的高端体验吗？</p>
-          <ul>
-            <li>成立于 2019 年，历经版本更迭，技术沉淀无可替代。</li>
-            <li>拒绝劣质拼凑，全代码自研，极致优化，丝滑运行。</li>
-            <li>我们的团队全天候待命，为您提供最专业的售后技术支持。</li>
-            <li>别为平庸买单，加入剑客，开启属于你的高端游戏时代！</li>
-          </ul>
-        </div>
-        <div class="license-card glass">
-          <p class="card-title">你还在寻找优质服务态度的脚本吗？</p>
-          <p class="card-title">厌倦了那些卖完就消失，售后靠随缘的快餐脚本？</p>
-          <ul>
-            <li>剑客承诺：每一个反馈都有回音</li>
-            <li>每一个问题都有结果，我们拥有完善的售后响应机制。</li>
-            <li>无论你是脚本新手还是老玩家，都能享受到最耐心的技术支持。</li>
-            <li>在这个混乱的脚本圈子里，我们选择用最诚恳的态度，守护你的每一次期待。</li>
-          </ul>
-        </div>
+
+      <div class="faq-grid">
+
+        <article class="faq-card glass">
+          <button class="faq-toggle" aria-expanded="false">
+            <h3 class="faq-question">为什么剑客脚本要付费？</h3>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer-wrapper">
+          <p class="faq-answer">加密技术和服务器维护都需要持续的资金投入</p>
+          <p class="faq-answer">付费是对技术安全的保障，也是对我们持续更新的动力。</p>
+          </div>
+        </article>
+
+        <article class="faq-card glass">
+          <button class="faq-toggle" aria-expanded="false">
+            <h3 class="faq-question">为什么剑客脚本这么贵？</h3>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer-wrapper">
+            <p class="faq-answer">我们拒绝任何形式的“缝合”与“搬运”。</p>
+            <p class="faq-answer">每一行代码均由剑客团队原创自研。</p>
+            <p class="faq-answer">极致的优化和独特的算法值得这个价格。</p>
+          </div>
+        </article>
+
+        <article class="faq-card glass">
+          <button class="faq-toggle" aria-expanded="false">
+            <h3 class="faq-question">为什么剑客更新这么慢？</h3>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer-wrapper">
+            <p class="faq-answer">剑客不是缝合脚本，我不像某些开发者（如神仇）几十分钟出一个脚本。</p>
+            <p class="faq-answer">我们要确保每一版更新都经过反复测试。</p>
+          </div>
+        </article>
+
+        <article class="faq-card glass">
+          <button class="faq-toggle" aria-expanded="false">
+            <h3 class="faq-question">剑客脚本真的不会被封号吗？</h3>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer-wrapper">
+            <p class="faq-answer">没有任何脚本敢吹嘘 100% 绝对安全</p>
+            <p class="faq-answer">但剑客拥有自 2019 年以来沉淀的独家反检测逻辑。</p>
+            <p class="faq-answer">我们追求的是长期稳定的“养老级”体验，而非为了功能牺牲账号。</p>
+          </div>
+        </article>
+
+        <article class="faq-card glass">
+          <button class="faq-toggle" aria-expanded="false">
+            <h3 class="faq-question">如果我不会用或者脚本出错了怎么办？</h3>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer-wrapper">
+            <p class="faq-answer">剑客从不玩消失。我们提供全天候的售后技术支持。</p>
+            <p class="faq-answer">假如脚本无法加载或者无法正常使用剑客脚本，我们会直接退款</p>
+          </div>
+        </article>
+
+        <article class="faq-card glass">
+          <button class="faq-toggle" aria-expanded="false">
+            <h3 class="faq-question">市面上那么多免费脚本，我为什么要选剑客？</h3>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer-wrapper">
+            <p class="faq-answer">免费往往是最贵的，伴随的是广告、后门甚至账号失窃。</p>
+            <p class="faq-answer">在剑客，你买到的是一份清净、一份专业和一份长达数年的信誉保证。</p>
+          </div>
+        </article>
+
+
       </div>
     </section>
   </main>
@@ -78,5 +171,62 @@
     </div>
   </footer>
   <script src="app.js"></script>
+  <script>
+    document.querySelectorAll('.faq-answer-wrapper').forEach(wrapper => {
+      wrapper.style.maxHeight = '0px';
+    });
+    
+    document.querySelectorAll('.faq-toggle').forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        const card = toggle.closest('.faq-card');
+        const answerWrapper = card.querySelector('.faq-answer-wrapper');
+        const icon = toggle.querySelector('.faq-icon');
+        
+        document.querySelectorAll('.faq-card').forEach(otherCard => {
+          if (otherCard !== card) {
+            const otherToggle = otherCard.querySelector('.faq-toggle');
+            const otherWrapper = otherCard.querySelector('.faq-answer-wrapper');
+            const otherIcon = otherToggle.querySelector('.faq-icon');
+            
+            otherToggle.setAttribute('aria-expanded', 'false');
+            otherCard.classList.remove('active');
+            otherIcon.textContent = '+';
+            otherWrapper.style.transition = 'none';
+            otherWrapper.style.maxHeight = '0px';
+            requestAnimationFrame(() => {
+              otherWrapper.style.transition = '';
+            });
+          }
+        });
+        
+        if (isExpanded) {
+          toggle.setAttribute('aria-expanded', 'false');
+          card.classList.remove('active');
+          icon.textContent = '+';
+          answerWrapper.style.transition = 'max-height 0.3s ease';
+          answerWrapper.style.maxHeight = '0px';
+        } else {
+          toggle.setAttribute('aria-expanded', 'true');
+          card.classList.add('active');
+          icon.textContent = '−';
+          
+          const originalTransition = answerWrapper.style.transition;
+          answerWrapper.style.transition = 'none';
+          answerWrapper.style.maxHeight = 'none';
+          const height = answerWrapper.scrollHeight;
+          answerWrapper.style.maxHeight = '0px';
+          
+          void answerWrapper.offsetHeight;
+          
+          answerWrapper.style.transition = originalTransition || 'max-height 0.3s ease';
+          requestAnimationFrame(() => {
+            answerWrapper.style.maxHeight = height + 'px';
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
