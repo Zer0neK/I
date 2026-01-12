@@ -1615,10 +1615,24 @@ h2 {
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;         
   position: relative;
   z-index: 1;
-  font-weight: 600;
+
+}
+
+.footer-brand span {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 32px; 
+  color: #ffffff;
+  letter-spacing: 4px; 
+  line-height: 1; 
+
+  text-shadow: 0 0 15px rgba(34, 197, 94, 0.3); 
+}
+
+.brand-icon.small {
+  flex-shrink: 0; 
 }
 
 .footer-meta {
