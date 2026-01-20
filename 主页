@@ -29,8 +29,8 @@
       </div>
     </div>
     <nav class="nav-links" aria-label="main navigation">
-      <a href="主页.html">主页</a>
-      <a href="games.html">游戏</a>
+      <a href="主页">主页</a>
+      <a href="游戏">游戏</a>
       <a href="contact.html">联系</a>
       <a href="license.html">关于</a>
     </nav>
