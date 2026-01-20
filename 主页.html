@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="cn">
-
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,8 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-
-
 <body>
   <div class="bg-sheen"></div>
   <video id="bg-video" class="bg-video" autoplay loop muted playsinline></video>
@@ -41,125 +37,61 @@
   </header>
 
   <main>
-    <section id="hero" class="hero">
-      <div class="hero-grid glass">
-        <div class="hero-copy">
-          <h1>剑客™</h1>
-          <p class="lede">以用户为中心的脚本</p>
-          <div class="meta">
-            <div class="meta-card">
-              <span class="meta-label">当前版本</span>
-              <span class="meta-value">v1.0.0</span>
-            </div>
-            <div class="meta-card">
-              <span class="meta-label">创始人</span>
-              <span class="meta-value">初夏</span>
-            </div>
-            <div class="status-indicator-wrapper">
-              <span class="pulsing-dot"></span>
-              <span>正常运行</span>
-            </div>
-          </div>
-          <div class="code-card">
-            <div class="code-header">
-              <p class="code-label">脚本链接</p>
-              <button class="copy" data-copy='getfenv().SG_Key = "这里输入你的卡密";
-loadstring(game:HttpGet("https://jianke.lol/SG"))()'>复制</button>
-            </div>
-            <p class="code-line">getfenv().SG_Key = "这里输入你的卡密";
-loadstring(game:HttpGet("https://jianke.lol/SG"))()</p>
-            <span class="toast" aria-live="polite">复制</span>
-          </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <img src="https://tr.rbxcdn.com/180DAY-e65456725d6e586c7509fcb5c19e233e/150/150/Image/Webp/noFilter" alt="剑客" class="hero-image">
-        </div>
-      </div>
+    <section class="section" id="购买">
+      <div class="code-card">
+        <div class="code-content">
+          <h2>购买价格:</h2>
+          <h2>8元/14天 (正在出售)</h2>
+          <h2>15元/30天 (正在出售)</h2>
+          <h2>100元/永久 (暂不出售)</h2>  
 
+        </div>
+
+        <div class="code-header">
+          <p class="code-label">qaz-主代理QQ</p>
+          <button class="copy" data-copy='2658543883'>复制</button>
+        </div>
+        <p class="code-line">2658543883</p>
+        <span class="toast" aria-live="polite">复制成功</span>
+      
+        <div class="code-header">
+          <p class="code-label">su-副代理QQ</p>
+          <button class="copy" data-copy='3417181070'>复制</button>
+        </div>
+        <p class="code-line">3417181070</p>
+        <span class="toast" aria-live="polite">复制成功</span>
+
+        <div class="code-header">
+          <p class="code-label"> [新] vvk-副代理QQ</p>
+          <button class="copy" data-copy='3792479719'>复制</button>
+        </div>
+        <p class="code-line">3792479719</p>
+        <span class="toast" aria-live="polite">复制成功</span>
+
+        <div class="code-header">
+          <p class="code-label"> [新] Beatrix-副代理QQ</p>
+          <button class="copy" data-copy='1379095120'>复制</button>
+        </div>
+        <p class="code-line">1379095120</p>
+        <span class="toast" aria-live="polite">复制成功</span>
+      </div>
+      
     </section>
 
-    <section id="faq" class="section">
-      <div class="section-header">
+    <section class="section" id="购买规则">
+      <div class="download-card glass">
         <div>
-          <p class="eyebrow">问题</p>
-          <h2>为什么选择剑客？</h2>
+          <h2>购买必看</h2>
+          <h2>1.购买后请妥善保管卡密，禁止以任何形式公开发布或告知他人。</h2>
+          <h2>2.卡密仅限购买者本人使用，禁止多人共用、租售或二次分销。</h2>
+          <h2>3.后台实时监控使用环境，凡触发泄露或异常共享规则，系统将立即永久删卡，不予退款。</h2>
+          <h2>一旦购买，即视为同意并知晓上述规则。</h2>
         </div>
-      </div>
-
-      <div class="faq-grid">
-
-        <article class="faq-card glass">
-          <button class="faq-toggle" aria-expanded="false">
-            <h3 class="faq-question">为什么剑客脚本要付费？</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer-wrapper">
-          <p class="faq-answer">加密技术和服务器维护都需要持续的资金投入</p>
-          <p class="faq-answer">付费是对技术安全的保障，也是对我们持续更新的动力。</p>
-          </div>
-        </article>
-
-        <article class="faq-card glass">
-          <button class="faq-toggle" aria-expanded="false">
-            <h3 class="faq-question">为什么剑客脚本这么贵？</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer-wrapper">
-            <p class="faq-answer">我们拒绝任何形式的“缝合”与“搬运”。</p>
-            <p class="faq-answer">每一行代码均由剑客团队原创自研。</p>
-            <p class="faq-answer">极致的优化和独特的算法值得这个价格。</p>
-          </div>
-        </article>
-
-        <article class="faq-card glass">
-          <button class="faq-toggle" aria-expanded="false">
-            <h3 class="faq-question">为什么剑客更新这么慢？</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer-wrapper">
-            <p class="faq-answer">剑客不是缝合脚本，我不像某些开发者（如神仇）几十分钟出一个脚本。</p>
-            <p class="faq-answer">我们要确保每一版更新都经过反复测试。</p>
-          </div>
-        </article>
-
-        <article class="faq-card glass">
-          <button class="faq-toggle" aria-expanded="false">
-            <h3 class="faq-question">剑客脚本真的不会被封号吗？</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer-wrapper">
-            <p class="faq-answer">没有任何脚本敢吹嘘 100% 绝对安全</p>
-            <p class="faq-answer">但剑客拥有自 2019 年以来沉淀的独家反检测逻辑。</p>
-            <p class="faq-answer">我们追求的是长期稳定的“养老级”体验，而非为了功能牺牲账号。</p>
-          </div>
-        </article>
-
-        <article class="faq-card glass">
-          <button class="faq-toggle" aria-expanded="false">
-            <h3 class="faq-question">如果我不会用或者脚本出错了怎么办？</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer-wrapper">
-            <p class="faq-answer">剑客从不玩消失。我们提供全天候的售后技术支持。</p>
-            <p class="faq-answer">假如脚本无法加载或者无法正常使用剑客脚本，我们会直接退款</p>
-          </div>
-        </article>
-
-        <article class="faq-card glass">
-          <button class="faq-toggle" aria-expanded="false">
-            <h3 class="faq-question">市面上那么多免费脚本，我为什么要选剑客？</h3>
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer-wrapper">
-            <p class="faq-answer">免费往往是最贵的，伴随的是广告、后门甚至账号失窃。</p>
-            <p class="faq-answer">在剑客，你买到的是一份清净、一份专业和一份长达数年的信誉保证。</p>
-          </div>
-        </article>
-
 
       </div>
     </section>
   </main>
+
 
   <footer class="footer glass">
     <div class="footer-brand">
@@ -171,62 +103,5 @@ loadstring(game:HttpGet("https://jianke.lol/SG"))()</p>
     </div>
   </footer>
   <script src="app.js"></script>
-  <script>
-    document.querySelectorAll('.faq-answer-wrapper').forEach(wrapper => {
-      wrapper.style.maxHeight = '0px';
-    });
-    
-    document.querySelectorAll('.faq-toggle').forEach(toggle => {
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-        const card = toggle.closest('.faq-card');
-        const answerWrapper = card.querySelector('.faq-answer-wrapper');
-        const icon = toggle.querySelector('.faq-icon');
-        
-        document.querySelectorAll('.faq-card').forEach(otherCard => {
-          if (otherCard !== card) {
-            const otherToggle = otherCard.querySelector('.faq-toggle');
-            const otherWrapper = otherCard.querySelector('.faq-answer-wrapper');
-            const otherIcon = otherToggle.querySelector('.faq-icon');
-            
-            otherToggle.setAttribute('aria-expanded', 'false');
-            otherCard.classList.remove('active');
-            otherIcon.textContent = '+';
-            otherWrapper.style.transition = 'none';
-            otherWrapper.style.maxHeight = '0px';
-            requestAnimationFrame(() => {
-              otherWrapper.style.transition = '';
-            });
-          }
-        });
-        
-        if (isExpanded) {
-          toggle.setAttribute('aria-expanded', 'false');
-          card.classList.remove('active');
-          icon.textContent = '+';
-          answerWrapper.style.transition = 'max-height 0.3s ease';
-          answerWrapper.style.maxHeight = '0px';
-        } else {
-          toggle.setAttribute('aria-expanded', 'true');
-          card.classList.add('active');
-          icon.textContent = '−';
-          
-          const originalTransition = answerWrapper.style.transition;
-          answerWrapper.style.transition = 'none';
-          answerWrapper.style.maxHeight = 'none';
-          const height = answerWrapper.scrollHeight;
-          answerWrapper.style.maxHeight = '0px';
-          
-          void answerWrapper.offsetHeight;
-          
-          answerWrapper.style.transition = originalTransition || 'max-height 0.3s ease';
-          requestAnimationFrame(() => {
-            answerWrapper.style.maxHeight = height + 'px';
-          });
-        }
-      });
-    });
-  </script>
 </body>
 </html>
