@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="cn">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,8 +25,8 @@
       </div>
     </div>
     <nav class="nav-links" aria-label="main navigation">
-      <a href="index.html">主页</a>
-      <a href="games.html">游戏 制作中</a>
+      <a href="主页">主页</a>
+      <a href="游戏">游戏 制作中</a>
       <a href="contact.html">联系</a>
       <a href="license.html">关于</a>
     </nav>
