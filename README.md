@@ -1,3 +1,3 @@
 # jianke.lol
 
-jianke.lol Website
+jianke.lol/主页.html
