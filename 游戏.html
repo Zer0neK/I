@@ -93,40 +93,27 @@
     };
 
     async function loadGames() {
-      const gamesGrid = document.getElementById('games-grid');
-      
-      try {
-        const apiUrl = 'https://www.roblox.com/games/6961824067/Fling-Things-and-People';
-        let response;
-        let lastError;
-        
-        try {
-          response = await fetch(`https://corsproxy.io/?${encodeURIComponent(apiUrl)}`);
-          if (response.ok) {
-            const data = await response.json();
-            renderGames(data);
-            return;
-          }
-        } catch (e) {
-          lastError = e;
-        }
-        
-        try {
-          response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`);
-          if (response.ok) {
-            const data = await response.json();
-            renderGames(data);
-            return;
-          }
-        } catch (e) {
-          lastError = e;
-        }
-        
-        throw lastError || new Error('failed to load games');
-      } catch (error) {
-        gamesGrid.innerHTML = '<div class="error-state">failed to load games check your connection</div>';
-      }
-    }
+  const gamesGrid = document.getElementById('games-grid');
+  
+  try {
+
+    const universeId = "2830055467"; 
+    const apiUrl = `https://games.roblox.com/v1/games?universeIds=${universeId}`;
+    
+    let response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(apiUrl)}`);
+    
+    if (!response.ok) throw new Error('API request failed');
+    
+    const data = await response.json();
+
+    renderGames(data); 
+    
+  } catch (error) {
+    console.error(error);
+
+    gamesGrid.innerHTML = '<div class="error-state">无法连接到服务器，请刷新页面</div>';
+  }
+}
 
     async function renderGames(data) {
       const gamesGrid = document.getElementById('games-grid');
